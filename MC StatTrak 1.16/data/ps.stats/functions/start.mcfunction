@@ -1,6 +1,34 @@
 setblock 0 0 0 yellow_shulker_box
 forceload add 0 0
 
+#Config
+scoreboard objectives add StatTrak.config dummy
+scoreboard objectives add StatTrak.dummy dummy
+scoreboard objectives add StatTrak trigger "MC StatTrak"
+
+scoreboard objectives add 1 dummy
+scoreboard players set 1 1 1
+
+scoreboard objectives add ST.coal dummy
+scoreboard objectives add ST.iron dummy
+scoreboard objectives add ST.redstone dummy
+scoreboard objectives add ST.lapis dummy
+scoreboard objectives add ST.gold dummy
+scoreboard objectives add ST.diamond dummy
+scoreboard objectives add ST.emerald dummy
+scoreboard objectives add ST.quartz dummy
+scoreboard objectives add ST.ore dummy
+scoreboard objectives add ST.stone dummy
+scoreboard objectives add ST.cobblestone dummy
+scoreboard objectives add ST.diorite dummy
+scoreboard objectives add ST.granite dummy
+scoreboard objectives add ST.andesite dummy
+scoreboard objectives add ST.netherrack dummy
+scoreboard objectives add ST.obsidian dummy
+
+
+
+
 
 #Pickaxes
 scoreboard objectives add tm.coal minecraft.mined:minecraft.coal_ore
