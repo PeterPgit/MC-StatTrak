@@ -7,157 +7,272 @@
             "name": "stone",
             "functions": [{
                 "function": "set_lore",
-                "replace": true,
+                "replace": false,
                 "entity": "this",
-                "lore": [
+                "lore": [{
 
-                    {
-                        "text": "StatTrak",
-                        "italic": false,
-                        "color": "gold"
+                        {
+                            "text": "StatTrak",
+                            "italic": false,
+                            "color": "gold"
+                        },
+
+                        {
+                            "text": ""
+                        },
+
+                        [{
+                                "text": "-- ",
+                                "italic": false,
+                                "color": "gray"
+                            },
+
+                            {
+                                "selector": "@s",
+                                "italic": false,
+                                "color": "gray"
+                            },
+
+                            {
+                                "text": "'s Digging Stats --",
+                                "italic": false,
+                                "color": "gray"
+                            }
+                        ]
                     },
 
                     {
-                        "text": ""
+                        "function": "set_lore",
+                        "conditions": [{
+                            "condition": "minecraft:entity_scores",
+                            "entity": "this",
+                            "scores": {
+                                "ST.dirt": 1
+                            }
+                        }],
+                        "replace": false,
+                        "entity": "this",
+                        "lore": [{
+                                "text": "Dirt: ",
+                                "color": "#705037",
+                                "italic": false
+                            },
+
+                            {
+                                "score": {
+                                    "name": "@s",
+                                    "objective": "ts.dirt"
+                                },
+
+                                "color": "white",
+                                "italic": false
+                            }
+                        ]
                     },
 
-                    [{
-                            "text": "-- ",
-                            "italic": false,
-                            "color": "gray"
-                        },
-
-                        {
-                            "selector": "@s",
-                            "italic": false,
-                            "color": "gray"
-                        },
-
-                        {
-                            "text": "'s Digging Stats --",
-                            "italic": false,
-                            "color": "gray"
-                        }
-                    ],
-
-                    [{
-                            "text": "Dirt: ",
-                            "color": "#705037",
-                            "italic": false
-                        },
-
-                        {
-                            "score": {
-                                "name": "@s",
-                                "objective": "ts.dirt"
+                    {
+                        "function": "set_lore",
+                        "conditions": [{
+                            "condition": "minecraft:entity_scores",
+                            "entity": "this",
+                            "scores": {
+                                "ST.grass": 1
+                            }
+                        }],
+                        "replace": false,
+                        "entity": "this",
+                        "lore": [{
+                                "text": "Grass: ",
+                                "color": "#507a47",
+                                "italic": false
                             },
 
-                            "color": "white",
-                            "italic": false
-                        }
-                    ],
+                            {
+                                "score": {
+                                    "name": "@s",
+                                    "objective": "ts.grass"
+                                },
 
-                    [{
-                            "text": "Grass: ",
-                            "color": "#507a47",
-                            "italic": false
-                        },
+                                "color": "white",
+                                "italic": false
+                            }
+                        ]
+                    },
 
-                        {
-                            "score": {
-                                "name": "@s",
-                                "objective": "ts.grass"
+                    {
+                        "function": "set_lore",
+                        "conditions": [{
+                            "condition": "minecraft:entity_scores",
+                            "entity": "this",
+                            "scores": {
+                                "ST.sandtotal": 1
+                            }
+                        }],
+                        "replace": false,
+                        "entity": "this",
+                        "lore": [{
+                                "text": "Sand: ",
+                                "color": "#dfd7b0",
+                                "italic": false
                             },
 
-                            "color": "white",
-                            "italic": false
-                        }
-                    ],
+                            {
+                                "score": {
+                                    "name": "@s",
+                                    "objective": "ts.sandtotal"
+                                },
 
-                    [{
-                            "text": "Sand: ",
-                            "color": "#dfd7b0",
-                            "italic": false
-                        },
+                                "color": "white",
+                                "italic": false
+                            }
+                        ]
+                    },
 
-                        {
-                            "score": {
-                                "name": "@s",
-                                "objective": "ts.sandtotal"
+                    {
+                        "function": "set_lore",
+                        "conditions": [{
+                            "condition": "minecraft:entity_scores",
+                            "entity": "this",
+                            "scores": {
+                                "ST.gravel": 1
+                            }
+                        }],
+                        "replace": false,
+                        "entity": "this",
+                        "lore": [{
+                                "text": "Gravel: ",
+                                "color": "#706967",
+                                "italic": false
                             },
 
-                            "color": "white",
-                            "italic": false
-                        }
-                    ],
+                            {
+                                "score": {
+                                    "name": "@s",
+                                    "objective": "ts.gravel"
+                                },
 
-                    [{
-                            "text": "Gravel: ",
-                            "color": "#706967",
-                            "italic": false
-                        },
+                                "color": "white",
+                                "italic": false
+                            }
+                        ]
+                    },
 
-                        {
-                            "score": {
-                                "name": "@s",
-                                "objective": "ts.gravel"
+                    {
+                        "function": "set_lore",
+                        "conditions": [{
+                            "condition": "minecraft:entity_scores",
+                            "entity": "this",
+                            "scores": {
+                                "ST.clay": 1
+                            }
+                        }],
+                        "replace": false,
+                        "entity": "this",
+                        "lore": [{
+                                "text": "Clay: ",
+                                "color": "#aaacb8",
+                                "italic": false
                             },
 
-                            "color": "white",
-                            "italic": false
-                        }
-                    ],
+                            {
+                                "score": {
+                                    "name": "@s",
+                                    "objective": "ts.clay"
+                                },
 
-                    [{
-                            "text": "Clay: ",
-                            "color": "#aaacb8",
-                            "italic": false
-                        },
+                                "color": "white",
+                                "italic": false
+                            }
+                        ]
+                    },
 
-                        {
-                            "score": {
-                                "name": "@s",
-                                "objective": "ts.clay"
+
+                    {
+                        "function": "set_lore",
+                        "conditions": [{
+                            "condition": "minecraft:entity_scores",
+                            "entity": "this",
+                            "scores": {
+                                "ST.totalsnow": 1
+                            }
+                        }],
+                        "replace": false,
+                        "entity": "this",
+                        "lore": [{
+                                "text": "Snow: ",
+                                "color": "#f0f9fb",
+                                "italic": false
                             },
 
-                            "color": "white",
-                            "italic": false
-                        }
-                    ],
+                            {
+                                "score": {
+                                    "name": "@s",
+                                    "objective": "ts.totalsnow"
+                                },
 
-                    [{
-                            "text": "Snow: ",
-                            "color": "#f0f9fb",
-                            "italic": false
-                        },
+                                "color": "white",
+                                "italic": false
+                            }
+                        ]
+                    },
 
-                        {
-                            "score": {
-                                "name": "@s",
-                                "objective": "ts.totalsnow"
+                    {
+                        "function": "set_lore",
+                        "conditions": [{
+                            "condition": "minecraft:entity_scores",
+                            "entity": "this",
+                            "scores": {
+                                "ST.soulsand": 1
+                            }
+                        }],
+                        "replace": false,
+                        "entity": "this",
+                        "lore": [{
+                                "text": "Soulsand: ",
+                                "color": "#402d22",
+                                "italic": false
                             },
 
-                            "color": "white",
-                            "italic": false
-                        }
-                    ],
+                            {
+                                "score": {
+                                    "name": "@s",
+                                    "objective": "ts.soulsand"
+                                },
 
-                    [{
-                            "text": "Total: ",
-                            "color": "dark_aqua",
-                            "italic": false
-                        },
+                                "color": "white",
+                                "italic": false
+                            }
+                        ]
+                    },
 
-                        {
-                            "score": {
-                                "name": "@s",
-                                "objective": "ts.totaldug"
+                    {
+                        "function": "set_lore",
+                        "conditions": [{
+                            "condition": "minecraft:entity_scores",
+                            "entity": "this",
+                            "scores": {
+                                "ST.totaldug": 1
+                            }
+                        }],
+                        "replace": false,
+                        "entity": "this",
+                        "lore": [{
+                                "text": "Total: ",
+                                "color": "dark_aqua",
+                                "italic": false
                             },
 
-                            "color": "white",
-                            "italic": false
-                        }
-                    ]
+                            {
+                                "score": {
+                                    "name": "@s",
+                                    "objective": "ts.totaldug"
+                                },
+
+                                "color": "white",
+                                "italic": false
+                            }
+                        ]
+                    }
                 ]
             }]
         }]

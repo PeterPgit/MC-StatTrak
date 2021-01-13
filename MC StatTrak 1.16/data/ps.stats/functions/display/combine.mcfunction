@@ -42,3 +42,17 @@ scoreboard players operation @s ts.hits += @s ts.ns_hits
 scoreboard players set @s ts.sandtotal 0
 scoreboard players operation @s ts.sandtotal += @s ts.sand
 scoreboard players operation @s ts.sandtotal += @s ts.redsand
+
+
+#Config
+
+## Pickaxe Other Title
+scoreboard players set @s ST.title1 0
+scoreboard players operation @s ST.title1 += @s ST.stone
+scoreboard players operation @s ST.title1 += @s ST.cobblestone
+scoreboard players operation @s ST.title1 += @s ST.diorite
+scoreboard players operation @s ST.title1 += @s ST.granite
+scoreboard players operation @s ST.title1 += @s ST.andesite
+scoreboard players operation @s ST.title1 += @s ST.obsidian
+scoreboard players operation @s ST.title1 += @s ST.netherrack
+

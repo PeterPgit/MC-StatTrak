@@ -6,324 +6,566 @@
             "type": "item",
             "name": "stone",
             "functions": [{
-                "function": "set_lore",
-                "replace": false,
-                "entity": "this",
-                "lore": [
+                    "function": "set_lore",
+                    "replace": false,
+                    "entity": "this",
+                    "lore": [
 
-                    {
-                        "text": "StatTrak",
-                        "italic": false,
-                        "bold": false,
-                        "color": "gold"
-                    },
+                        {
+                            "text": "StatTrak",
+                            "italic": false,
+                            "bold": false,
+                            "color": "gold"
+                        },
 
-                    {
-                        "text": ""
-                    },
+                        {
+                            "text": ""
+                        },
 
-                    [{
-                            "text": "-- ",
+                        [{
+                                "text": "-- ",
+                                "italic": false,
+                                "color": "gray"
+                            },
+
+                            {
+                                "selector": "@s",
+                                "italic": false,
+                                "color": "gray"
+                            },
+
+                            {
+                                "text": "'s Mining Stats --",
+                                "italic": false,
+                                "color": "gray"
+                            }
+                        ]
+                    ]
+                },
+
+                {
+                    "function": "set_lore",
+                    "conditions": [{
+                        "condition": "minecraft:entity_scores",
+                        "entity": "this",
+                        "scores": {
+                            "ST.coal": 1
+                        }
+                    }],
+                    "replace": false,
+                    "entity": "this",
+                    "lore": [
+
+                        [{
+                                "text": "Coal: ",
+                                "color": "#363c44",
+                                "italic": false
+                            },
+
+                            {
+                                "score": {
+                                    "name": "@s",
+                                    "objective": "ts.coal"
+                                },
+
+                                "color": "white",
+                                "italic": false
+                            }
+                        ]
+                    ]
+                },
+
+                {
+                    "function": "set_lore",
+                    "conditions": [{
+                        "condition": "minecraft:entity_scores",
+                        "entity": "this",
+                        "scores": {
+                            "ST.iron": 1
+                        }
+                    }],
+                    "replace": false,
+                    "entity": "this",
+                    "lore": [
+                        [{
+                                "text": "Iron: ",
+                                "color": "#aaaaaa",
+                                "italic": false
+                            },
+
+                            {
+                                "score": {
+                                    "name": "@s",
+                                    "objective": "ts.iron"
+                                },
+
+                                "color": "white",
+                                "italic": false
+                            }
+                        ]
+                    ]
+                },
+
+                {
+                    "function": "set_lore",
+                    "conditions": [{
+                        "condition": "minecraft:entity_scores",
+                        "entity": "this",
+                        "scores": {
+                            "ST.redstone": 1
+                        }
+                    }],
+                    "replace": false,
+                    "entity": "this",
+                    "lore": [
+                        [{
+                                "text": "Redstone: ",
+                                "color": "#ea0b18",
+                                "italic": false
+                            },
+
+                            {
+                                "score": {
+                                    "name": "@s",
+                                    "objective": "ts.redstone"
+                                },
+
+                                "color": "white",
+                                "italic": false
+                            }
+                        ]
+                    ]
+                },
+
+                {
+                    "function": "set_lore",
+                    "conditions": [{
+                        "condition": "minecraft:entity_scores",
+                        "entity": "this",
+                        "scores": {
+                            "ST.lapis": 1
+                        }
+                    }],
+                    "replace": false,
+                    "entity": "this",
+                    "lore": [
+                        [{
+                                "text": "Lapis: ",
+                                "color": "#1c53a8",
+                                "italic": false
+                            },
+
+                            {
+                                "score": {
+                                    "name": "@s",
+                                    "objective": "ts.lapis"
+                                },
+
+                                "color": "white",
+                                "italic": false
+                            }
+                        ]
+                    ]
+                },
+
+                {
+                    "function": "set_lore",
+                    "conditions": [{
+                        "condition": "minecraft:entity_scores",
+                        "entity": "this",
+                        "scores": {
+                            "ST.gold": 1
+                        }
+                    }],
+                    "replace": false,
+                    "entity": "this",
+                    "lore": [
+                        [{
+                                "text": "Gold: ",
+                                "color": "#f9d656",
+                                "italic": false
+                            },
+
+                            {
+                                "score": {
+                                    "name": "@s",
+                                    "objective": "ts.gold"
+                                },
+
+                                "color": "white",
+                                "italic": false
+                            }
+                        ]
+                    ]
+                },
+
+                {
+                    "function": "set_lore",
+                    "conditions": [{
+                        "condition": "minecraft:entity_scores",
+                        "entity": "this",
+                        "scores": {
+                            "ST.diamond": 1
+                        }
+                    }],
+                    "replace": false,
+                    "entity": "this",
+                    "lore": [
+                        [{
+                                "text": "Diamond: ",
+                                "color": "#54fcfc",
+                                "italic": false
+                            },
+
+                            {
+                                "score": {
+                                    "name": "@s",
+                                    "objective": "ts.diamond"
+                                },
+
+                                "color": "white",
+                                "italic": false
+                            }
+                        ]
+                    ]
+                },
+
+                {
+                    "function": "set_lore",
+                    "conditions": [{
+                        "condition": "minecraft:entity_scores",
+                        "entity": "this",
+                        "scores": {
+                            "ST.emerald": 1
+                        }
+                    }],
+                    "replace": false,
+                    "entity": "this",
+                    "lore": [
+                        [{
+                                "text": "Emerald: ",
+                                "color": "#14952d",
+                                "italic": false
+                            },
+
+                            {
+                                "score": {
+                                    "name": "@s",
+                                    "objective": "ts.emerald"
+                                },
+
+                                "color": "white",
+                                "italic": false
+                            }
+                        ]
+                    ]
+                },
+
+                {
+                    "function": "set_lore",
+                    "conditions": [{
+                        "condition": "minecraft:entity_scores",
+                        "entity": "this",
+                        "scores": {
+                            "ST.quartz": 1
+                        }
+                    }],
+                    "replace": false,
+                    "entity": "this",
+                    "lore": [
+                        [{
+                                "text": "Quartz: ",
+                                "color": "white",
+                                "italic": false
+                            },
+
+                            {
+                                "score": {
+                                    "name": "@s",
+                                    "objective": "ts.quartz"
+                                },
+
+                                "color": "white",
+                                "italic": false
+                            }
+                        ]
+                    ]
+                },
+
+                {
+                    "function": "set_lore",
+                    "conditions": [{
+                        "condition": "minecraft:entity_scores",
+                        "entity": "this",
+                        "scores": {
+                            "ST.ore": 1
+                        }
+                    }],
+                    "replace": false,
+                    "entity": "this",
+                    "lore": [
+                        [{
+                                "text": "Total Ore: ",
+                                "color": "dark_aqua",
+                                "italic": false
+                            },
+
+                            {
+                                "score": {
+                                    "name": "@s",
+                                    "objective": "ts.ore"
+                                },
+
+                                "color": "white",
+                                "italic": false
+                            }
+                        ]
+                    ]
+                },
+
+                {
+                    "function": "set_lore",
+                    "conditions": [{
+                        "condition": "minecraft:entity_scores",
+                        "entity": "this",
+                        "scores": {
+                            "ST.title1": {
+                                "min": 1,
+                                "max": 999
+                            }
+                        }
+                    }],
+                    "replace": false,
+                    "entity": "this",
+                    "lore": [{
+                            "text": ""
+                        },
+
+                        {
+                            "text": "-- Others --",
                             "italic": false,
                             "color": "gray"
-                        },
-
-                        {
-                            "selector": "@s",
-                            "italic": false,
-                            "color": "gray"
-                        },
-
-                        {
-                            "text": "'s Mining Stats --",
-                            "italic": false,
-                            "color": "gray"
-                        }
-                    ],
-
-                    [{
-                            "text": "Coal: ",
-                            "color": "#363c44",
-                            "italic": false
-                        },
-
-                        {
-                            "score": {
-                                "name": "@s",
-                                "objective": "ts.coal"
-                            },
-
-                            "color": "white",
-                            "italic": false
-                        }
-                    ],
-
-                    [{
-                            "text": "Iron: ",
-                            "color": "#aaaaaa",
-                            "italic": false
-                        },
-
-                        {
-                            "score": {
-                                "name": "@s",
-                                "objective": "ts.iron"
-                            },
-
-                            "color": "white",
-                            "italic": false
-                        }
-                    ],
-
-                    [{
-                            "text": "Redstone: ",
-                            "color": "#ea0b18",
-                            "italic": false
-                        },
-
-                        {
-                            "score": {
-                                "name": "@s",
-                                "objective": "ts.redstone"
-                            },
-
-                            "color": "white",
-                            "italic": false
-                        }
-                    ],
-
-                    [{
-                            "text": "Lapis: ",
-                            "color": "#1c53a8",
-                            "italic": false
-                        },
-
-                        {
-                            "score": {
-                                "name": "@s",
-                                "objective": "ts.lapis"
-                            },
-
-                            "color": "white",
-                            "italic": false
-                        }
-                    ],
-
-                    [{
-                            "text": "Gold: ",
-                            "color": "#f9d656",
-                            "italic": false
-                        },
-
-                        {
-                            "score": {
-                                "name": "@s",
-                                "objective": "ts.gold"
-                            },
-
-                            "color": "white",
-                            "italic": false
-                        }
-                    ],
-
-                    [{
-                            "text": "Diamond: ",
-                            "color": "#54fcfc",
-                            "italic": false
-                        },
-
-                        {
-                            "score": {
-                                "name": "@s",
-                                "objective": "ts.diamond"
-                            },
-
-                            "color": "white",
-                            "italic": false
-                        }
-                    ],
-
-                    [{
-                            "text": "Emerald: ",
-                            "color": "#14952d",
-                            "italic": false
-                        },
-
-                        {
-                            "score": {
-                                "name": "@s",
-                                "objective": "ts.emerald"
-                            },
-
-                            "color": "white",
-                            "italic": false
-                        }
-                    ],
-
-                    [{
-                            "text": "Quartz: ",
-                            "color": "white",
-                            "italic": false
-                        },
-
-                        {
-                            "score": {
-                                "name": "@s",
-                                "objective": "ts.quartz"
-                            },
-
-                            "color": "white",
-                            "italic": false
-                        }
-                    ],
-
-                    [{
-                            "text": "Total Ore: ",
-                            "color": "dark_aqua",
-                            "italic": false
-                        },
-
-                        {
-                            "score": {
-                                "name": "@s",
-                                "objective": "ts.ore"
-                            },
-
-                            "color": "white",
-                            "italic": false
-                        }
-                    ],
-
-                    {
-                        "text": ""
-                    },
-
-                    {
-                        "text": "-- Others --",
-                        "italic": false,
-                        "color": "gray"
-                    },
-
-                    [{
-                            "text": "Stone: ",
-                            "color": "#7d7d7d",
-                            "italic": false
-                        },
-
-                        {
-                            "score": {
-                                "name": "@s",
-                                "objective": "ts.stone"
-                            },
-
-                            "color": "white",
-                            "italic": false
-                        }
-                    ],
-
-                    [{
-                            "text": "Cobblestone: ",
-                            "color": "#4e4e4f",
-                            "italic": false
-                        },
-
-                        {
-                            "score": {
-                                "name": "@s",
-                                "objective": "ts.cobblestone"
-                            },
-
-                            "color": "white",
-                            "italic": false
-                        }
-                    ],
-
-                    [{
-                            "text": "Diorite: ",
-                            "color": "#e5e5e5",
-                            "italic": false
-                        },
-
-                        {
-                            "score": {
-                                "name": "@s",
-                                "objective": "ts.diorite"
-                            },
-
-                            "color": "white",
-                            "italic": false
-                        }
-                    ],
-
-                    [{
-                            "text": "Granite: ",
-                            "color": "#9c6957",
-                            "italic": false
-                        },
-
-                        {
-                            "score": {
-                                "name": "@s",
-                                "objective": "ts.granite"
-                            },
-
-                            "color": "white",
-                            "italic": false
-                        }
-                    ],
-
-                    [{
-                            "text": "Andesite: ",
-                            "color": "#88888c",
-                            "italic": false
-                        },
-
-                        {
-                            "score": {
-                                "name": "@s",
-                                "objective": "ts.andesite"
-                            },
-
-                            "color": "white",
-                            "italic": false
-                        }
-                    ],
-
-                    [{
-                            "text": "Obsidian: ",
-                            "color": "#211839",
-                            "italic": false
-                        },
-
-                        {
-                            "score": {
-                                "name": "@s",
-                                "objective": "ts.obsidian"
-                            },
-
-                            "color": "white",
-                            "italic": false
-                        }
-                    ],
-
-                    [{
-                            "text": "Netherrack: ",
-                            "color": "#4d0e0f",
-                            "italic": false
-                        },
-
-                        {
-                            "score": {
-                                "name": "@s",
-                                "objective": "ts.netherrack"
-                            },
-
-                            "color": "white",
-                            "italic": false
                         }
                     ]
-                ]
-            }]
+
+                },
+
+                {
+                    "function": "set_lore",
+                    "conditions": [{
+                        "condition": "minecraft:entity_scores",
+                        "entity": "this",
+                        "scores": {
+                            "ST.stone": 1
+                        }
+                    }],
+                    "replace": false,
+                    "entity": "this",
+                    "lore": [
+                        [{
+                                "text": "Stone: ",
+                                "color": "#7d7d7d",
+                                "italic": false
+                            },
+
+                            {
+                                "score": {
+                                    "name": "@s",
+                                    "objective": "ts.stone"
+                                },
+
+                                "color": "white",
+                                "italic": false
+                            }
+                        ]
+                    ]
+                },
+
+                {
+                    "function": "set_lore",
+                    "conditions": [{
+                        "condition": "minecraft:entity_scores",
+                        "entity": "this",
+                        "scores": {
+                            "ST.cobblestone": 1
+                        }
+                    }],
+                    "replace": false,
+                    "entity": "this",
+                    "lore": [
+                        [{
+                                "text": "Cobblestone: ",
+                                "color": "#4e4e4f",
+                                "italic": false
+                            },
+
+                            {
+                                "score": {
+                                    "name": "@s",
+                                    "objective": "ts.cobblestone"
+                                },
+                                "color": "white",
+                                "italic": false
+                            }
+                        ]
+                    ]
+                },
+
+                {
+                    "function": "set_lore",
+                    "conditions": [{
+                        "condition": "minecraft:entity_scores",
+                        "entity": "this",
+                        "scores": {
+                            "ST.diorite": 1
+                        }
+                    }],
+                    "replace": false,
+                    "entity": "this",
+                    "lore": [
+                        [{
+                                "text": "Diorite: ",
+                                "color": "#e5e5e5",
+                                "italic": false
+                            },
+
+                            {
+                                "score": {
+                                    "name": "@s",
+                                    "objective": "ts.diorite"
+                                },
+                                "color": "white",
+                                "italic": false
+                            }
+                        ]
+                    ]
+                },
+
+                {
+                    "function": "set_lore",
+                    "conditions": [{
+                        "condition": "minecraft:entity_scores",
+                        "entity": "this",
+                        "scores": {
+                            "ST.granite": 1
+                        }
+                    }],
+                    "replace": false,
+                    "entity": "this",
+                    "lore": [
+                        [{
+                                "text": "Granite: ",
+                                "color": "#9c6957",
+                                "italic": false
+                            },
+
+                            {
+                                "score": {
+                                    "name": "@s",
+                                    "objective": "ts.granite"
+                                },
+
+                                "color": "white",
+                                "italic": false
+                            }
+                        ]
+                    ]
+                },
+
+                {
+                    "function": "set_lore",
+                    "conditions": [{
+                        "condition": "minecraft:entity_scores",
+                        "entity": "this",
+                        "scores": {
+                            "ST.andesite": 1
+                        }
+                    }],
+                    "replace": false,
+                    "entity": "this",
+                    "lore": [
+                        [{
+                                "text": "Andesite: ",
+                                "color": "#88888c",
+                                "italic": false
+                            },
+
+                            {
+                                "score": {
+                                    "name": "@s",
+                                    "objective": "ts.andesite"
+                                },
+
+                                "color": "white",
+                                "italic": false
+                            }
+                        ]
+                    ]
+                },
+
+                {
+                    "function": "set_lore",
+                    "conditions": [{
+                        "condition": "minecraft:entity_scores",
+                        "entity": "this",
+                        "scores": {
+                            "ST.obsidian": 1
+                        }
+                    }],
+                    "replace": false,
+                    "entity": "this",
+                    "lore": [
+                        [{
+                                "text": "Obsidian: ",
+                                "color": "#211839",
+                                "italic": false
+                            },
+
+                            {
+                                "score": {
+                                    "name": "@s",
+                                    "objective": "ts.obsidian"
+                                },
+
+                                "color": "white",
+                                "italic": false
+                            }
+                        ]
+                    ]
+                },
+
+                {
+                    "function": "set_lore",
+                    "conditions": [{
+                        "condition": "minecraft:entity_scores",
+                        "entity": "this",
+                        "scores": {
+                            "ST.netherrack": 1
+                        }
+                    }],
+                    "replace": false,
+                    "entity": "this",
+                    "lore": [
+                        [{
+                                "text": "Netherrack: ",
+                                "color": "#4d0e0f",
+                                "italic": false
+                            },
+
+                            {
+                                "score": {
+                                    "name": "@s",
+                                    "objective": "ts.netherrack"
+                                },
+
+                                "color": "white",
+                                "italic": false
+                            }
+                        ]
+                    ]
+                }
+
+            ]
         }]
     }]
 }

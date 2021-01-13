@@ -6,22 +6,30 @@
             "type": "item",
             "name": "stone",
             "functions": [{
-                "function": "set_lore",
-                "replace": true,
-                "entity": "this",
-                "lore": [
+                    "function": "set_lore",
+                    "replace": false,
+                    "entity": "this",
+                    "lore": [
 
-                    {
-                        "text": "StatTrak",
-                        "italic": false,
-                        "color": "gold"
-                    },
+                        {
+                            "text": "StatTrak",
+                            "italic": false,
+                            "color": "gold"
+                        },
 
-                    {
-                        "text": ""
-                    },
+                        {
+                            "text": ""
+                        }
+                    ]
+                },
 
-                    [{
+                {
+                    "function": "set_lore",
+                    "replace": false,
+                    "entity": "this",
+                    "lore": [
+                        
+                        [{
                             "text": "-- ",
                             "italic": false,
                             "color": "gray"
@@ -38,162 +46,289 @@
                             "italic": false,
                             "color": "gray"
                         }
-                    ],
-
-                    [{
-                            "text": "Oak: ",
-                            "color": "#c29d62",
-                            "italic": false
-                        },
-
-                        {
-                            "score": {
-                                "name": "@s",
-                                "objective": "ts.oak"
-                            },
-
-                            "color": "white",
-                            "italic": false
-                        }
-                    ],
-
-                    [{
-                            "text": "Spruce: ",
-                            "color": "#886539",
-                            "italic": false
-                        },
-
-                        {
-                            "score": {
-                                "name": "@s",
-                                "objective": "ts.spruce"
-                            },
-
-                            "color": "white",
-                            "italic": false
-                        }
-                    ],
-
-                    [{
-                            "text": "Birch: ",
-                            "color": "#d7c185",
-                            "italic": false
-                        },
-
-                        {
-                            "score": {
-                                "name": "@s",
-                                "objective": "ts.birch"
-                            },
-
-                            "color": "white",
-                            "italic": false
-                        }
-                    ],
-
-                    [{
-                            "text": "Jungle: ",
-                            "color": "#b88764",
-                            "italic": false
-                        },
-
-                        {
-                            "score": {
-                                "name": "@s",
-                                "objective": "ts.jungle"
-                            },
-
-                            "color": "white",
-                            "italic": false
-                        }
-                    ],
-
-                    [{
-                            "text": "Acacia: ",
-                            "color": "#c26d3f",
-                            "italic": false
-                        },
-
-                        {
-                            "score": {
-                                "name": "@s",
-                                "objective": "ts.acacia"
-                            },
-
-                            "color": "white",
-                            "italic": false
-                        }
-                    ],
-
-                    [{
-                            "text": "Dark Oak: ",
-                            "color": "#53381a",
-                            "italic": false
-                        },
-
-                        {
-                            "score": {
-                                "name": "@s",
-                                "objective": "ts.dark_oak"
-                            },
-
-                            "color": "white",
-                            "italic": false
-                        }
-                    ],
-
-                    [{
-                            "text": "Crimson Stem: ",
-                            "color": "#7a3852",
-                            "italic": false
-                        },
-
-                        {
-                            "score": {
-                                "name": "@s",
-                                "objective": "ts.crimson_stem"
-                            },
-
-                            "color": "white",
-                            "italic": false
-                        }
-                    ],
-
-                    [{
-                            "text": "Warped Stem: ",
-                            "color": "#35817f",
-                            "italic": false
-                        },
-
-                        {
-                            "score": {
-                                "name": "@s",
-                                "objective": "ts.warped_stem"
-                            },
-
-                            "color": "white",
-                            "italic": false
-                        }
-                    ],
-
-                    [{
-                            "text": "Total: ",
-                            "color": "dark_aqua",
-                            "italic": false
-                        },
-
-                        {
-                            "score": {
-                                "name": "@s",
-                                "objective": "ts.wood"
-                            },
-
-                            "color": "white",
-                            "italic": false
-                        }
                     ]
                 ]
-            }]
+                },
+
+                {
+                    "function": "set_lore",
+                    "conditions": [{
+                        "condition": "minecraft:entity_scores",
+                        "entity": "this",
+                        "scores": {
+                            "ST.oak": 1
+                        }
+                    }],
+                    "replace": false,
+                    "entity": "this",
+                    "lore": [
+                        [{
+                                "text": "Oak: ",
+                                "color": "#c29d62",
+                                "italic": false
+                            },
+
+                            {
+                                "score": {
+                                    "name": "@s",
+                                    "objective": "ts.oak"
+                                },
+
+                                "color": "white",
+                                "italic": false
+                            }
+                        ]
+                    ]
+                },
+
+                {
+                    "function": "set_lore",
+                    "conditions": [{
+                        "condition": "minecraft:entity_scores",
+                        "entity": "this",
+                        "scores": {
+                            "ST.spruce": 1
+                        }
+                    }],
+                    "replace": false,
+                    "entity": "this",
+                    "lore": [
+                        [{
+                                "text": "Spruce: ",
+                                "color": "#886539",
+                                "italic": false
+                            },
+
+                            {
+                                "score": {
+                                    "name": "@s",
+                                    "objective": "ts.spruce"
+                                },
+
+                                "color": "white",
+                                "italic": false
+                            }
+                        ]
+                    ]
+                },
+
+                {
+                    "function": "set_lore",
+                    "conditions": [{
+                        "condition": "minecraft:entity_scores",
+                        "entity": "this",
+                        "scores": {
+                            "ST.birch": 1
+                        }
+                    }],
+                    "replace": false,
+                    "entity": "this",
+                    "lore": [
+                        [{
+                                "text": "Birch: ",
+                                "color": "#d7c185",
+                                "italic": false
+                            },
+
+                            {
+                                "score": {
+                                    "name": "@s",
+                                    "objective": "ts.birch"
+                                },
+
+                                "color": "white",
+                                "italic": false
+                            }
+                        ]
+                    ]
+                },
+
+                {
+                    "function": "set_lore",
+                    "conditions": [{
+                        "condition": "minecraft:entity_scores",
+                        "entity": "this",
+                        "scores": {
+                            "ST.jungle": 1
+                        }
+                    }],
+                    "replace": false,
+                    "entity": "this",
+                    "lore": [
+                        [{
+                                "text": "Jungle: ",
+                                "color": "#b88764",
+                                "italic": false
+                            },
+
+                            {
+                                "score": {
+                                    "name": "@s",
+                                    "objective": "ts.jungle"
+                                },
+
+                                "color": "white",
+                                "italic": false
+                            }
+                        ]
+                    ]
+                },
+
+                {
+                    "function": "set_lore",
+                    "conditions": [{
+                        "condition": "minecraft:entity_scores",
+                        "entity": "this",
+                        "scores": {
+                            "ST.acacia": 1
+                        }
+                    }],
+                    "replace": false,
+                    "entity": "this",
+                    "lore": [
+                        [{
+                                "text": "Acacia: ",
+                                "color": "#c26d3f",
+                                "italic": false
+                            },
+
+                            {
+                                "score": {
+                                    "name": "@s",
+                                    "objective": "ts.acacia"
+                                },
+
+                                "color": "white",
+                                "italic": false
+                            }
+                        ]
+                    ]
+                },
+
+                {
+                    "function": "set_lore",
+                    "conditions": [{
+                        "condition": "minecraft:entity_scores",
+                        "entity": "this",
+                        "scores": {
+                            "ST.dark_oak": 1
+                        }
+                    }],
+                    "replace": false,
+                    "entity": "this",
+                    "lore": [
+                        [{
+                                "text": "Dark Oak: ",
+                                "color": "#53381a",
+                                "italic": false
+                            },
+
+                            {
+                                "score": {
+                                    "name": "@s",
+                                    "objective": "ts.dark_oak"
+                                },
+
+                                "color": "white",
+                                "italic": false
+                            }
+                        ]
+                    ]
+                },
+
+                {
+                    "function": "set_lore",
+                    "conditions": [{
+                        "condition": "minecraft:entity_scores",
+                        "entity": "this",
+                        "scores": {
+                            "ST.crimson_stem": 1
+                        }
+                    }],
+                    "replace": false,
+                    "entity": "this",
+                    "lore": [
+                        [{
+                                "text": "Crimson Stem: ",
+                                "color": "#7a3852",
+                                "italic": false
+                            },
+
+                            {
+                                "score": {
+                                    "name": "@s",
+                                    "objective": "ts.crimson_stem"
+                                },
+
+                                "color": "white",
+                                "italic": false
+                            }
+                        ]
+                    ]
+                },
+
+                {
+                    "function": "set_lore",
+                    "conditions": [{
+                        "condition": "minecraft:entity_scores",
+                        "entity": "this",
+                        "scores": {
+                            "ST.warped_stem": 1
+                        }
+                    }],
+                    "replace": false,
+                    "entity": "this",
+                    "lore": [
+                        [{
+                                "text": "Warped Stem: ",
+                                "color": "#35817f",
+                                "italic": false
+                            },
+
+                            {
+                                "score": {
+                                    "name": "@s",
+                                    "objective": "ts.warped_stem"
+                                },
+
+                                "color": "white",
+                                "italic": false
+                            }
+                        ]
+                    ]
+                },
+
+                {
+                    "function": "set_lore",
+                    "conditions": [{
+                        "condition": "minecraft:entity_scores",
+                        "entity": "this",
+                        "scores": {
+                            "ST.wood": 1
+                        }
+                    }],
+                    "replace": false,
+                    "entity": "this",
+                    "lore": [
+                        [{
+                                "text": "Total: ",
+                                "color": "dark_aqua",
+                                "italic": false
+                            },
+
+                            {
+                                "score": {
+                                    "name": "@s",
+                                    "objective": "ts.wood"
+                                },
+
+                                "color": "white",
+                                "italic": false
+                            }
+                        ]
+                    ]
+                }
+            ]
         }]
     }]
 }

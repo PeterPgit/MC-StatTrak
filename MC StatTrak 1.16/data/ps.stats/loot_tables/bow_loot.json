@@ -6,41 +6,54 @@
       "type": "item",
       "name": "stone",
       "functions": [{
-        "function": "set_lore",
-        "replace": true,
-        "entity": "this",
-        "lore": [
+          "function": "set_lore",
+          "replace": false,
+          "entity": "this",
+          "lore": [
 
-          {
-            "text": "StatTrak",
-            "italic": false,
-            "color": "gold"
-          },
-
-          {
-            "text": ""
-          },
-
-          [{
-              "text": "-- ",
+            {
+              "text": "StatTrak",
               "italic": false,
-              "color": "gray"
+              "color": "gold"
             },
 
             {
-              "selector": "@s",
-              "italic": false,
-              "color": "gray"
+              "text": ""
             },
 
-            {
-              "text": "'s Bow Stats --",
-              "italic": false,
-              "color": "gray"
+            [{
+                "text": "-- ",
+                "italic": false,
+                "color": "gray"
+              },
+
+              {
+                "selector": "@s",
+                "italic": false,
+                "color": "gray"
+              },
+
+              {
+                "text": "'s Bow Stats --",
+                "italic": false,
+                "color": "gray"
+              }
+            ]
+          ]
+        },
+
+        {
+          "function": "set_lore",
+          "conditions": [{
+            "condition": "minecraft:entity_scores",
+            "entity": "this",
+            "scores": {
+              "ST.bow_mob_kills": 1
             }
-          ],
-
-          [{
+          }],
+          "replace": false,
+          "entity": "this",
+          "lore": [{
               "text": "Mob Kills: ",
               "color": "dark_aqua",
               "italic": false
@@ -55,9 +68,21 @@
               "color": "dark_aqua",
               "italic": false
             }
-          ],
+          ]
+        },
 
-          [{
+        {
+          "function": "set_lore",
+          "conditions": [{
+            "condition": "minecraft:entity_scores",
+            "entity": "this",
+            "scores": {
+              "ST.bow_p_kills": 1
+            }
+          }],
+          "replace": false,
+          "entity": "this",
+          "lore": [{
               "text": "Player Kills: ",
               "color": "dark_aqua",
               "italic": false
@@ -72,9 +97,21 @@
               "color": "dark_aqua",
               "italic": false
             }
-          ],
+          ]
+        },
 
-          [{
+        {
+          "function": "set_lore",
+          "conditions": [{
+            "condition": "minecraft:entity_scores",
+            "entity": "this",
+            "scores": {
+              "ST.shots": 1
+            }
+          }],
+          "replace": false,
+          "entity": "this",
+          "lore": [{
               "text": "Shots: ",
               "color": "dark_aqua",
               "italic": false
@@ -90,8 +127,8 @@
               "italic": false
             }
           ]
-        ]
-      }]
+        }
+      ]
     }]
   }]
 }

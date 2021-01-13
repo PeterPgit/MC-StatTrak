@@ -1,7 +1,7 @@
 setblock 0 0 0 yellow_shulker_box
 forceload add 0 0
 
-#Config
+# Config
 scoreboard objectives add StatTrak.config dummy
 scoreboard objectives add StatTrak.dummy dummy
 scoreboard objectives add StatTrak trigger "MC StatTrak"
@@ -9,6 +9,7 @@ scoreboard objectives add StatTrak trigger "MC StatTrak"
 scoreboard objectives add 1 dummy
 scoreboard players set 1 1 1
 
+## Pickaxe Configs 100s
 scoreboard objectives add ST.coal dummy
 scoreboard objectives add ST.iron dummy
 scoreboard objectives add ST.redstone dummy
@@ -18,15 +19,49 @@ scoreboard objectives add ST.diamond dummy
 scoreboard objectives add ST.emerald dummy
 scoreboard objectives add ST.quartz dummy
 scoreboard objectives add ST.ore dummy
+scoreboard objectives add ST.title1 dummy
 scoreboard objectives add ST.stone dummy
 scoreboard objectives add ST.cobblestone dummy
 scoreboard objectives add ST.diorite dummy
 scoreboard objectives add ST.granite dummy
 scoreboard objectives add ST.andesite dummy
-scoreboard objectives add ST.netherrack dummy
 scoreboard objectives add ST.obsidian dummy
+scoreboard objectives add ST.netherrack dummy
 
+## Axe Configs 200s
+scoreboard objectives add ST.oak dummy
+scoreboard objectives add ST.spruce dummy
+scoreboard objectives add ST.birch dummy
+scoreboard objectives add ST.jungle dummy
+scoreboard objectives add ST.acacia dummy
+scoreboard objectives add ST.dark_oak dummy
+scoreboard objectives add ST.crimson_stem dummy
+scoreboard objectives add ST.warped_stem dummy
+scoreboard objectives add ST.wood dummy
 
+## Shovel Configs 300s
+scoreboard objectives add ST.dirt dummy
+scoreboard objectives add ST.grass dummy
+scoreboard objectives add ST.sandtotal dummy
+scoreboard objectives add ST.gravel dummy
+scoreboard objectives add ST.clay dummy
+scoreboard objectives add ST.totalsnow dummy
+scoreboard objectives add ST.soulsand dummy
+scoreboard objectives add ST.totaldug dummy
+
+## Swords Configs 400s
+scoreboard objectives add ST.mob_kills dummy
+scoreboard objectives add ST.player_kills dummy
+scoreboard objectives add ST.hits dummy
+scoreboard objectives add ST.sword_damage dummy
+
+## Bow Configs 500s
+scoreboard objectives add ST.bow_mob_kills dummy
+scoreboard objectives add ST.bow_p_kills dummy
+scoreboard objectives add ST.shots dummy
+
+## Elytra Configs 600s
+scoreboard objectives add ST.flight dummy
 
 
 
@@ -59,10 +94,10 @@ scoreboard objectives add tm.granite minecraft.mined:minecraft.granite
 scoreboard objectives add ts.granite dummy
 scoreboard objectives add tm.andesite minecraft.mined:minecraft.andesite
 scoreboard objectives add ts.andesite dummy
-scoreboard objectives add tm.netherrack minecraft.mined:minecraft.netherrack
-scoreboard objectives add ts.netherrack dummy
 scoreboard objectives add tm.obsidian minecraft.mined:minecraft.obsidian
 scoreboard objectives add ts.obsidian dummy
+scoreboard objectives add tm.netherrack minecraft.mined:minecraft.netherrack
+scoreboard objectives add ts.netherrack dummy
 
 
 #Axes
@@ -158,4 +193,4 @@ scoreboard players set 2 2 2
 
 
 
-tellraw @p ["",{"text":"[][]","obfuscated":true,"color":"gold"},{"text":"--------------------------","color":"dark_red"},{"text":"[][]","obfuscated":true,"color":"gold"},{"text":"\n"},{"text":"\n"},{"text":"Loaded Datapack: ","bold":true,"color":"aqua"},{"text":"Tool Stat Tracker","underlined":true,"color":"yellow","clickEvent":{"action":"open_url","value":"https://github.com/Ning1253/Pickaxe-Stats"}},{"text":"\n"},{"text":"\n"},{"text":"By: ","bold":true,"color":"aqua"},{"text":"Ning1253","underlined":true,"color":"white","clickEvent":{"action":"open_url","value":"https://github.com/Ning1253"}},{"text":"\n"},{"text":"\n"},{"text":"Modified By: ","bold":true,"color":"aqua"},{"text":"Ppenguin10","underlined":true,"color":"white","clickEvent":{"action":"open_url","value":"https://github.com/PeterPgit"}},{"text":"\n"},{"text":"\n"},{"text":"Delete Datapack","bold":true,"underlined":true,"color":"dark_red","clickEvent":{"action":"run_command","value":"/execute as @a at @s run function ps.stats:remove"},"hoverEvent":{"action":"show_text","contents":{"text":"THIS CANNOT BE UNDONE!","bold":true,"underlined":true,"color":"dark_red"}}},{"text":"\n"},{"text":"\n"},{"text":"[][]","obfuscated":true,"color":"gold"},{"text":"--------------------------","color":"dark_red"},{"text":"[][]","obfuscated":true,"color":"gold"}]
+tellraw @p ["",{"text":"[][]","obfuscated":true,"color":"gold"},{"text":"--------------------------","color":"dark_red"},{"text":"[][]","obfuscated":true,"color":"gold"},{"text":"\n"},{"text":"\n"},{"text":"Loaded Datapack: ","bold":true,"color":"aqua"},{"text":"Tool Stat Tracker","underlined":true,"color":"yellow","clickEvent":{"action":"open_url","value":"https://github.com/Ning1253/Pickaxe-Stats"}},{"text":"\n"},{"text":"\n"},{"text":"By: ","bold":true,"color":"aqua"},{"text":"Ning1253","underlined":true,"color":"white","clickEvent":{"action":"open_url","value":"https://github.com/Ning1253"}},{"text":"\n"},{"text":"\n"},{"text":"Modified By: ","bold":true,"color":"aqua"},{"text":"Ppenguin10","underlined":true,"color":"white","clickEvent":{"action":"open_url","value":"https://github.com/PeterPgit"}},{"text":"\n"},{"text":"\n"},{"text":"Delete Datapack","bold":true,"underlined":true,"color":"dark_red","clickEvent":{"action":"run_command","value":"/execute as @a at @s run function ps.stats:uninstall"},"hoverEvent":{"action":"show_text","contents":{"text":"THIS CANNOT BE UNDONE!","bold":true,"underlined":true,"color":"dark_red"}}},{"text":"\n"},{"text":"\n"},{"text":"[][]","obfuscated":true,"color":"gold"},{"text":"--------------------------","color":"dark_red"},{"text":"[][]","obfuscated":true,"color":"gold"}]

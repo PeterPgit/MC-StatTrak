@@ -14,10 +14,10 @@ execute as @a at @s run function ps.stats:name_tag_check
 
 execute as @a at @s run function ps.stats:display/disp
 
+
 execute as @a at @s run function ps.stats:config
 
+execute as @a[scores={StatTrak=1..}] at @s run function ps.stats:trigger
+execute as @a[scores={StatTrak=1..}] at @s run trigger StatTrak set 0
 
-execute as @a[scores={StatTrak=1..}] run function ps.stats:trigger
-
-execute as @a[scores={StatTrak=1..}] run trigger StatTrak set 0
 scoreboard players enable @a StatTrak
